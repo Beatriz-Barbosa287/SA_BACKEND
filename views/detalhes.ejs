@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title><%= produto.nome %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="produto-nome"><%= produto.nome %></h1>
+        <hr>
+        <% if (produto.imagem) { %>
+            <div class="imagem-container">
+                <img src="<%= produto.imagem %>" alt="<%= produto.nome %>" class="imagem-produto">
+            </div>
+        <% } %>
+        <p class="descricao-produto"><%= produto.descricao %></p>
+        <p class="preco-produto"><b>Preço: R$ <%= produto.preco %></b></p>
+        <hr>
+        <button class="botao">Voltar</button>
+    </div>
+</body>
+</html>

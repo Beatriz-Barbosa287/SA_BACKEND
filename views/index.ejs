@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/img/logo.webp" alt="logo" class="logo" width="200" height="200">
+        </header>
+        
+        <main>
+            <h1>Catálogo de Nossos Produtos</h1>
+            <hr>
+
+            <div class="acoes">
+                <button id="cadastronovo" class="botao"> <a href="/novo" class="link-botao">Cadastrar Novo Produto</a> </button>
+            </div>
+
+            <ul class="lista-produtos">
+                <% produtos.forEach(produto => { %>
+                    <li class="item-produto">
+                        <a href="/artesanatos/<%= produto.id %>" class="link-produto">
+                            <img src="<%= produto.imagem %>" alt="<%= produto.nome %>" class="produto-img">
+                            <div>
+                                <h2><%= produto.nome %></h2>
+                                <p class="descricao-produto"><%= produto.descricao %></p>
+                                <p class="preco-produto">R$ <%= produto.preco %></p>
+                            </div>
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>

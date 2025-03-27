@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Novo Produto</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo-cadastro">Cadastrar Novo Produto</h1>
+        <form action="/novo" method="POST" class="formulario-produto">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" required class="input-text">
+            <label for="descricao">Descrição:</label>
+            <textarea name="descricao" required class="input-text"></textarea>
+            <label for="preco">Preço:</label>
+            <input type="number" name="preco" required class="input-text">
+            <label for="imagem">URL da Imagem:</label>
+            <input type="url" name="imagem" class="input-text">
+            <button type="submit" class="botao">Cadastrar</button>
+        </form>
+        <hr>
+        <button class="botao">Voltar</button>
+    </div>
+</body>
+</html>
